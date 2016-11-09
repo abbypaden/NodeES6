@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/abbypaden/node4andy/issues"
   },
-  "homepage": "https://github.com/abbypaden/node4andy"
+  "homepage": "https://github.com/abbypaden/node4andy",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }
