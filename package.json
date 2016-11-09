@@ -4,23 +4,20 @@
   "description": "Fun with Node!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "scripts" :{
+    "test": "echo \"Error: no test specified\" && exit 1",
 	"start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/abbypaden/node4andy.git"
+    "url": "https://github.com/abbypaden/NodeES6.git"
   },
   "author": "Abby Paden",
   "license": "see elsewhere",
   "bugs": {
-    "url": "https://github.com/abbypaden/node4andy/issues"
+    "url": "https://github.com/abbypaden/NodeES6/issues"
   },
-  "homepage": "https://github.com/abbypaden/node4andy",
+  "homepage": "https://github.com/abbypaden/NodeES6",
   "dependencies": {
     "express": "^4.14.0"
-  
   }
 }
