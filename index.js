@@ -12,7 +12,11 @@ app.get('/numbers', (req, res) => {
 	res.json(myArray);
 });
 
-app.listen(3000, () => {
+app.post('/numbers', (req, res) => {
+	res.send(myArray);
+}
+
+app.listen(3100, () => {
 	console.log("Listening on port 3000...");
 	console.log(idx.str1);
 	console.log(idx.num2);
