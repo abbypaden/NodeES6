@@ -1,22 +1,47 @@
 let express = require('express');
 let app = express();
+let router = express.Router();
 const port = Number(process.env.PORT || 3000);
-var idx = {index: 0 }
-var str = { str1: "Hello", str2: "World" };
-var num = { num1: 4, num2: 5 };
 
-var myArray = Object.assign(idx.index, idx.str1, idx.num1);     
+let a = [
+	{
+		id: 1,
+		name: "Indianapolis"
+	},
+	{
+		id: 2,
+		name: "Bloomington"
+	},
+	{
+		id: 3,
+		name: "Cleveland"
+	},
+	{
+		id: 4,
+		name: "New York"
+	}
+];
+
+let b = a.map((item) => {
+	return Object.assign(item, { twice: (item.id * 2) });
+});    
 
 app.get('/numbers', (req, res) => {
-	res.json(myArray);
+	res.json(a);
 });
 
-app.post('/numbers', (req, res) => {
-	res.send(myArray);
+app.get('/data', (req, res) => {
+	res.json(document.cookie("This is a cookie!"));
 });
 
-app.listen(port => {
+router.get('/data', (req, res, next) => {
+	if (req.params.cookie === "This is a cookie!") {
+		res.render('cookie found');
+	}
+});
+
+app.listen(port, router => {
 	console.log('listening...');
 });
 
-// kljf;askdjf;laksdjf;alksdjf;alksdfj;asl
+app.use('/data', router);
