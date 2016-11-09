@@ -1,6 +1,11 @@
 let express = require('express');
 let app = express();
-let myArray = [1,2,3,4,5,6,7,8,9,0];
+
+var idx = {index: 0 }
+var str = { str1: "Hello", str2: "World" };
+var num = { num1: 98, num2: 13 };
+
+var myArray = Object.assign(idx, str, num);     
 
 app.get('/numbers', (req, res) => {
 	res.json(myArray);
@@ -8,4 +13,6 @@ app.get('/numbers', (req, res) => {
 
 app.listen(3000, () => {
 	console.log("Listening on port 3000...");
+	console.log(idx.str1);
+	console.log(idx.num2);
 });
