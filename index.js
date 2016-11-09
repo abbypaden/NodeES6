@@ -15,6 +15,8 @@ app.post('/numbers', (req, res) => {
 	res.send(myArray);
 });
 
-app.listen(port);
+app.listen(port => {
+	console.log('listening...');
+});
 
 // kljf;askdjf;laksdjf;alksdjf;alksdfj;asl
