@@ -3,7 +3,7 @@ let app = express();
 
 var idx = {index: 0 }
 var str = { str1: "Hello", str2: "World" };
-var num = { num1: 98, num2: 13 };
+var num = { num1: 4, num2: 5 };
 
 
 var myArray = Object.assign(idx, str, num);     
