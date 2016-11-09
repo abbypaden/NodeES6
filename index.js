@@ -6,7 +6,7 @@ var str = { str1: "Hello", str2: "World" };
 var num = { num1: 4, num2: 5 };
 
 
-var myArray = Object.assign(idx, str, num);     
+var myArray = Object.assign(idx.index, idx.str1, idx.num1);     
 
 app.get('/numbers', (req, res) => {
 	res.json(myArray);
@@ -17,5 +17,3 @@ app.post('/numbers', (req, res) => {
 });
 
 app.listen(port);
-
-// comment for whatever
