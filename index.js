@@ -5,6 +5,7 @@ var idx = {index: 0 }
 var str = { str1: "Hello", str2: "World" };
 var num = { num1: 98, num2: 13 };
 
+// comment to force push
 var myArray = Object.assign(idx, str, num);     
 
 app.get('/numbers', (req, res) => {
