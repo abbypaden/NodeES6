@@ -34,7 +34,7 @@ app.get('/data', (req, res) => {
 	res.json(document.cookie("This is a cookie!"));
 });
 
-router.get('/data', (req, res, next) => {
+router.get('/data', (req, res) => {
 	if (req.params.cookie === "This is a cookie!") {
 		res.render('cookie found');
 	}
