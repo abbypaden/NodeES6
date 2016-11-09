@@ -16,10 +16,6 @@ app.post('/numbers', (req, res) => {
 	res.send(myArray);
 });
 
-app.listen(port, () => {
-	console.log("Listening on port 3000...");
-	console.log(idx.str1);
-	console.log(idx.num2);
-});
+app.listen(port);
 
 // comment for whatever
